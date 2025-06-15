@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h2>Daily Calorie Calculator</h2>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+        <ul class="flash">
+            {% for message in messages %}
+        <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+         {% endif %}
+         {% endwith %}
 
+        <form action="/result" method="post">
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" required min="1">
+
+            <label for="gender">Gender: </label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br />
+
+            <label for="height">Height: </label>
+            <input type="number" id="height" name="height" required>
+            <select name="height_unit">
+                <option value="cm">cm</option>
+                <option value="inch">inch</option>
+            </select>
+
+            <label for="weight">Weight: </label>
+            <input type="number" id="weight" name="weight" required>
+            <select name="weight_unit">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select>
+
+            <label for="activity_level">Activity Level:</label>
+            <select id="activity_level" name="activity_level" required>
+                <option value="Low">Low (little to no exercise)</option>
+                <option value="Moderate">Moderate (moderate exercise 3-5 days/week)</option>
+                <option value="High">High (intense exercise daily)</option>
+            </select><br />
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -73,9 +73,8 @@ Writing this README file 📝
 
 Debugging the Python code and test files 🐞
 
-🎥 Demo
-A demo video is included in the project submission.
-(If you're the reviewer: check the video to see how the app works step-by-step.)
+🎥 Demo Video:
+You can watch a demo of my project here: [Watch Demo](https://drive.google.com/file/d/1cJ9xQqxM6NE4WE5k5VEYqnoqC_DbxT7v/view?usp=sharing)
 
 🙋 Author
 Mobina
